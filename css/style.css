@@ -227,3 +227,36 @@ body {
         font-size: 1.25rem;
     }
 }
+
+
+/* heartSnow */
+
+span.snow {
+    display: block;
+    width: 148px;
+    height: 145px;
+    position: fixed;
+    -webkit-animation: drift 5s ease-in-out infinite;
+  }
+  
+  span.snow.a { 
+    background-image: url('../img/heart_green.png'); 
+    background-repeat:no-repeat;
+  }
+  span.snow.b { 
+    background-image: url(../img/heart_pink.png); 
+    background-repeat:no-repeat;
+  }
+  
+  
+  @-webkit-keyframes drift {
+    0% { -webkit-transform: translatex(20px); }
+    50% { -webkit-transform: translatex(-20px); }
+    100% { -webkit-transform: translatex(20px); }
+  }
+  
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    50% { -webkit-transform: rotate(180deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
