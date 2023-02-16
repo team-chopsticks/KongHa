@@ -229,7 +229,7 @@ body {
 }
 
 
-/* heartSnow */
+/* ---------- heartSnow ---------- */
 
 span.snow {
     display: block;
@@ -244,10 +244,9 @@ span.snow {
     background-repeat:no-repeat;
   }
   span.snow.b { 
-    background-image: url(../img/heart_pink.png); 
+    background-image: url('../img/heart_pink.png'); 
     background-repeat:no-repeat;
   }
-  
   
   @-webkit-keyframes drift {
     0% { -webkit-transform: translatex(20px); }
@@ -255,8 +254,3 @@ span.snow {
     100% { -webkit-transform: translatex(20px); }
   }
   
-  @-webkit-keyframes spin {
-    0% { -webkit-transform: rotate(0deg); }
-    50% { -webkit-transform: rotate(180deg); }
-    100% { -webkit-transform: rotate(360deg); }
-  }
