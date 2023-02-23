@@ -65,14 +65,14 @@
   
   /* -0-0-0-0-0-0- switch_kr -0-0-0-0-0-0- */
   
-  #switch_kr {
+  #switch_language {
       position: absolute;
       appearance: none;
       -webkit-appearance: none;
       -moz-appearance: none;
   }
     
-    .switch_label_kr {
+    .switch_label_language {
       position: relative;
       cursor: pointer;
       display: inline-block;
@@ -84,11 +84,11 @@
       transition: 0.2s;
     }
   
-    .switch_label_kr:hover {
+    .switch_label_language:hover {
       background: #efefef;
     }
   
-    .onf_btn_kr {
+    .onf_btn_language {
       position: absolute;
       top: 2px;
       left: 3px;
@@ -105,7 +105,7 @@
     }
     
     /* ---- checking style ---- */
-    #switch_kr:checked + .switch_label_kr .onf_btn_kr {
+    #switch_language:checked + .switch_label_language .onf_btn_language {
       left: 45px;
       background: #43FF8F;
       box-shadow: 1px 2px 3px #00000020;

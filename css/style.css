@@ -34,6 +34,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
 }
+
 .greenHeart{
     background-image: url('../img/heart_green.svg');
     background-size: cover;
@@ -111,7 +112,7 @@ body {
     background-position: center, center;
     background-repeat: repeat, repeat;
     background-color: #FF33D9;
-    transition: 4s;
+    transition: 5s;
 }
 
 .menu_inner{
