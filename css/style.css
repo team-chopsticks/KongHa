@@ -41,6 +41,18 @@ body {
     background-repeat: no-repeat;
 }
 
+.emoji_1{
+    background-image: url('../img/emoji_1.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.emoji_2{
+    background-image: url('../img/emoji_2.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 /* -♡-♡-♡-♡-♡-♡- Hearts End -♡-♡-♡-♡-♡-♡- */
 
 .parent {

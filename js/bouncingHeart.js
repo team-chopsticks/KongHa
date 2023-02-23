@@ -30,6 +30,12 @@ const e = {x:800, y:100, w:150, h:143, dx:1, dy:-1, speed:3.5, ani:{}, move:fals
 const greenHeart03 = document.createElement("div");
 const f = {x:1000, y:400, w:150, h:143, dx:1, dy:-1, speed:2, ani:{}, move:false};
 
+const emoji01 = document.createElement("div");
+const h = {x:100, y:600, w:160, h:40, dx:-1, dy:-1, speed:1, ani:{}, move:false};
+
+const emoji02 = document.createElement("div");
+const j = {x:1200, y:400, w:160, h:40, dx:1, dy:-1, speed:1, ani:{}, move:false};
+
 pinkHeart01.className = "pinkHeart";
 pinkHeart01.style.width = `${b.w}px`;
 pinkHeart01.style.height = `${b.h}px`;
@@ -79,6 +85,21 @@ greenHeart03.style.position ="absolute";
 greenHeart03.style.left = `${f.x}px`;
 greenHeart03.style.top = `${f.y}px`;
 
+emoji01.className = "emoji_1";
+emoji01.style.width = `${h.w}px`;
+emoji01.style.height = `${h.h}px`;
+emoji01.style.position ="absolute";
+emoji01.style.left = `${h.x}px`;
+emoji01.style.top = `${h.y}px`;
+
+emoji02.className = "emoji_2";
+emoji02.style.width = `${j.w}px`;
+emoji02.style.height = `${j.h}px`;
+emoji02.style.position ="absolute";
+emoji02.style.left = `${j.x}px`;
+emoji02.style.top = `${j.y}px`;
+
+
 
 main.append(pinkHeart01);
 main.append(pinkHeart02);
@@ -87,6 +108,9 @@ main.append(pinkHeart04);
 main.append(greenHeart01);
 main.append(greenHeart02);
 main.append(greenHeart03);
+
+main.append(emoji01);
+main.append(emoji02);
 
 mover();
 
@@ -135,6 +159,19 @@ function mover(){
         f.dy *= -1;
     }
 
+    if(h.x>innerWidth-h.w || h.x < 0){
+        h.dx *= -1;
+    }
+    if(h.y>innerHeight-h.h ||h.y < 0){
+        h.dy *= -1;
+    }
+    if(j.x>innerWidth-j.w || j.x < 0){
+        j.dx *= -1;
+    }
+    if(j.y>innerHeight-j.h || j.y < 0){
+        j.dy *= -1;
+    }
+
     b.x += b.dx * b.speed;
     b.y += b.dy * b.speed;
     g.x += g.dx * g.speed;
@@ -150,6 +187,11 @@ function mover(){
     e.y += e.dy * e.speed;
     f.x += f.dx * f.speed;
     f.y += f.dy * f.speed;
+
+    h.x += h.dx * h.speed;
+    h.y += h.dy * h.speed;
+    j.x += j.dx * j.speed;
+    j.y += j.dy * j.speed;
 
 
     pinkHeart01.style.left = `${b.x}px`;
@@ -167,6 +209,11 @@ function mover(){
     greenHeart02.style.top = `${e.y}px`;
     greenHeart03.style.left = `${f.x}px`;
     greenHeart03.style.top = `${f.y}px`;
+
+    emoji01.style.left = `${h.x}px`;
+    emoji01.style.top = `${h.y}px`;
+    emoji02.style.left = `${j.x}px`;
+    emoji02.style.top = `${j.y}px`;
 
         b.ani = requestAnimationFrame(mover);
 }
