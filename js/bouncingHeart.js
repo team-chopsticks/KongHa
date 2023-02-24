@@ -10,31 +10,31 @@ main.style.width = "innerWidth";
 main.style.height = "innerHeight";
 
 const pinkHeart01 = document.createElement("div");
-const b = {x:0, y:0, w:150, h:143, dx:1, dy:1, speed:3.7, ani:{}, move:false};
+const b = {x:1000, y:400, w:150, h:143, dx:1, dy:1, speed:3.7, ani:{}, move:false};
 
 const pinkHeart02 = document.createElement("div");
-const g = {x:1000, y:500, w:150, h:143, dx:1, dy:1, speed:2.5, ani:{}, move:false};
+const g = {x:900, y:200, w:150, h:143, dx:1, dy:1, speed:2.5, ani:{}, move:false};
 
 const pinkHeart03 = document.createElement("div");
 const c = {x:600, y:300, w:150, h:143, dx:1, dy:-1, speed:3, ani:{}, move:false};
 
 const pinkHeart04 = document.createElement("div");
-const a = {x:900, y:600, w:150, h:143, dx:-1, dy:-1, speed:3, ani:{}, move:false};
+const a = {x:200, y:600, w:150, h:143, dx:-1, dy:-1, speed:3, ani:{}, move:false};
 
 const greenHeart01 = document.createElement("div");
-const d = {x:200, y:200, w:150, h:143, dx:1, dy:-1, speed:2, ani:{}, move:false};
+const d = {x:1000, y:500, w:150, h:143, dx:1, dy:-1, speed:2, ani:{}, move:false};
 
 const greenHeart02 = document.createElement("div");
 const e = {x:800, y:100, w:150, h:143, dx:1, dy:-1, speed:3.5, ani:{}, move:false};
 
 const greenHeart03 = document.createElement("div");
-const f = {x:1000, y:400, w:150, h:143, dx:1, dy:-1, speed:2, ani:{}, move:false};
+const f = {x:0, y:400, w:150, h:143, dx:1, dy:-1, speed:2, ani:{}, move:false};
 
 const emoji01 = document.createElement("div");
-const h = {x:100, y:600, w:160, h:40, dx:-1, dy:-1, speed:1, ani:{}, move:false};
+const h = {x:100, y:200, w:160, h:40, dx:-1, dy:-1, speed:1, ani:{}, move:false};
 
 const emoji02 = document.createElement("div");
-const j = {x:1200, y:400, w:160, h:40, dx:1, dy:-1, speed:1, ani:{}, move:false};
+const j = {x:0, y:100, w:160, h:40, dx:1, dy:1, speed:1, ani:{}, move:false};
 
 pinkHeart01.className = "pinkHeart";
 pinkHeart01.style.width = `${b.w}px`;
@@ -217,3 +217,44 @@ function mover(){
 
         b.ani = requestAnimationFrame(mover);
 }
+
+if (innerWidth < 1200) {
+    pinkHeart01.style.display = "none";
+    greenHeart01.style.display = "none";
+} else {
+    pinkHeart01.style.display = "block";
+    greenHeart01.style.display = "block";
+}
+if (innerWidth < 1100) {
+    pinkHeart02.style.display = "none";
+} else {
+    pinkHeart02.style.display = "block";
+}
+if (innerWidth < 820) {
+    pinkHeart03.style.display = "none";
+} else {
+    pinkHeart03.style.display = "block";
+}
+
+window.addEventListener('resize', function() {
+    innerWidth = window.innerWidth;
+    innerHeight = window.innerHeight;
+
+    if (innerWidth < 1200) {
+        pinkHeart01.style.display = "none";
+        greenHeart01.style.display = "none";
+    } else {
+        pinkHeart01.style.display = "block";
+        greenHeart01.style.display = "block";
+    }
+    if (innerWidth < 1100) {
+        pinkHeart02.style.display = "none";
+    } else {
+        pinkHeart02.style.display = "block";
+    }
+    if (innerWidth < 820) {
+        pinkHeart03.style.display = "none";
+    } else {
+        pinkHeart03.style.display = "block";
+    }
+});

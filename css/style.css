@@ -30,6 +30,8 @@ body {
 /* -♡-♡-♡-♡-♡-♡- Hearts Start -♡-♡-♡-♡-♡-♡- */
 
 .pinkHeart{
+    width: 10%;
+    height: 9%;
     background-image: url('../img/heart_pink.svg');
     background-size: cover;
     background-repeat: no-repeat;
