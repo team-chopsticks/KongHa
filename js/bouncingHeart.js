@@ -99,6 +99,17 @@ emoji02.style.position ="absolute";
 emoji02.style.left = `${j.x}px`;
 emoji02.style.top = `${j.y}px`;
 
+pinkHeart01.addEventListener('click', shrinkHeart01);
+pinkHeart02.addEventListener('click', shrinkHeart02);
+pinkHeart03.addEventListener('click', shrinkHeart03);
+pinkHeart04.addEventListener('click', shrinkHeart04);
+
+greenHeart01.addEventListener('click', shrinkHeart05);
+greenHeart02.addEventListener('click', shrinkHeart06);
+greenHeart03.addEventListener('click', shrinkHeart07);
+
+emoji01.addEventListener('click', shrinkemoji01);
+emoji02.addEventListener('click', shrinkemoji02);
 
 
 main.append(pinkHeart01);
@@ -216,6 +227,69 @@ function mover(){
     emoji02.style.top = `${j.y}px`;
 
         b.ani = requestAnimationFrame(mover);
+}
+
+function shrinkHeart01() {
+    b.w /= 2;
+    b.h /= 2;
+    pinkHeart01.style.width = `${b.w}px`;
+    pinkHeart01.style.height = `${b.h}px`;
+}
+
+function shrinkHeart02() {
+    g.w /= 2;
+    g.h /= 2;
+    pinkHeart02.style.width = `${g.w}px`;
+    pinkHeart02.style.height = `${g.h}px`;
+}
+
+function shrinkHeart03() {
+    c.w /= 2;
+    c.h /= 2;
+    pinkHeart03.style.width = `${c.w}px`;
+    pinkHeart03.style.height = `${c.h}px`;
+}
+
+function shrinkHeart04() {
+    a.w /= 2;
+    a.h /= 2;
+    pinkHeart04.style.width = `${a.w}px`;
+    pinkHeart04.style.height = `${a.h}px`;
+}
+
+function shrinkHeart05() {
+    d.w /= 2;
+    d.h /= 2;
+    greenHeart01.style.width = `${d.w}px`;
+    greenHeart01.style.height = `${d.h}px`;
+}
+
+function shrinkHeart06() {
+    e.w /= 2;
+    e.h /= 2;
+    greenHeart02.style.width = `${e.w}px`;
+    greenHeart02.style.height = `${e.h}px`;
+}
+
+function shrinkHeart07() {
+    f.w /= 2;
+    f.h /= 2;
+    greenHeart03.style.width = `${f.w}px`;
+    greenHeart03.style.height = `${f.h}px`;
+}
+
+function shrinkemoji01() {
+    h.w /= 2;
+    h.h /= 2;
+    emoji01.style.width = `${h.w}px`;
+    emoji01.style.height = `${h.h}px`;
+}
+
+function shrinkemoji02() {
+    j.w /= 2;
+    j.h /= 2;
+    emoji02.style.width = `${j.w}px`;
+    emoji02.style.height = `${j.h}px`;
 }
 
 if (innerWidth < 1200) {

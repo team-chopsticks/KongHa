@@ -6,44 +6,41 @@ console.log(window.innerHeight);
 let innerWidth = window.innerWidth;
 let innerHeight = window.innerHeight;
 
-main.style.width = "100%";
-main.style.height = "100%";
+main.style.width = "innerWidth";
+main.style.height = "innerHeight";
 
-const pinkHeart01 = document.createElement("div");
-const b = {x:0, y:0, w:"10%", h:"9%", dx:1, dy:1, speed:3.7, ani:{}, move:false};
+const data = [
+  { className: "pinkHeart", x: 1000, y: 400, w: 150, h: 143, dx: 1, dy: 1, speed: 3.7, ani: {}, move: false },
+  { className: "pinkHeart", x: 900, y: 200, w: 150, h: 143, dx: 1, dy: 1, speed: 2.5, ani: {}, move: false },
+  { className: "pinkHeart", x: 600, y: 300, w: 150, h: 143, dx: 1, dy: -1, speed: 3, ani: {}, move: false },
+  { className: "pinkHeart", x: 200, y: 600, w: 150, h: 143, dx: -1, dy: -1, speed: 3, ani: {}, move: false },
+  { className: "greenHeart", x: 1000, y: 500, w: 150, h: 143, dx: 1, dy: -1, speed: 2, ani: {}, move: false },
+  { className: "greenHeart", x: 800, y: 100, w: 150, h: 143, dx: 1, dy: -1, speed: 3.5, ani: {}, move: false },
+  { className: "greenHeart", x: 0, y: 400, w: 150, h: 143, dx: 1, dy: -1, speed: 2, ani: {}, move: false },
+  { className: "emoji_1", x: 100, y: 200, w: 160, h: 40, dx: -1, dy: -1, speed: 1, ani: {}, move: false },
+  { className: "emoji_2", x: 0, y: 100, w: 160, h: 40, dx: 1, dy: 1, speed: 1, ani: {}, move: false },
+];
 
-pinkHeart01.className = "pinkHeart";
-pinkHeart01.style.width = `${b.w}`;
-pinkHeart01.style.height = `${b.h}`;
-pinkHeart01.style.position ="absolute";
-pinkHeart01.style.left = `${b.x}px`;
-pinkHeart01.style.top = `${b.y}px`;
-
-
-main.append(pinkHeart01);
-
-main.append(emoji01);
-
-mover();
-
-function mover(){
-    if(b.x > main.clientWidth - pinkHeart01.clientWidth || b.x < 0){
-        b.dx *= -1;
-    }
-    if(b.y > main.clientHeight - pinkHeart01.clientHeight || b.y < 0){
-        b.dy *= -1;
-    }
-
-    b.x += b.dx * b.speed;
-    b.y += b.dy * b.speed;
-
-    pinkHeart01.style.left = `${b.x}px`;
-    pinkHeart01.style.top = `${b.y}px`;
- 
-    b.ani = requestAnimationFrame(mover);
-}
-
-window.addEventListener('resize', function() {
-    innerWidth = window.innerWidth;
-    innerHeight = window.innerHeight;
+data.forEach((obj) => {
+  const el = document.createElement("div");
+  el.className = obj.className;
+  el.style.width = `${obj.w}px`;
+  el.style.height = `${obj.h}px`;
+  el.style.position = "absolute";
+  el.style.left = `${obj.x}px`;
+  el.style.top = `${obj.y}px`;
+  el.addEventListener("click", function () {
+    shrinkHeart(this);
+  });
+  main.append(el);
 });
+
+function shrinkHeart(el) {
+  let size = parseInt(el.style.width) - 20;
+  if (size <= 0) {
+    el.remove();
+  } else {
+    el.style.width = `${size}px`;
+    el.style.height = `${size}px`;
+  }
+}
