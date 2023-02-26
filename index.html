@@ -15,12 +15,16 @@
     <div class="parent">
 
         <div class="div1">
-            <div class="mobile"></div>
+            <div class="mobile">
+                <div class="mobile_marquee">
+                    <div class="marquee-item_3">콩과하는 이런일 저런일 이렇게 저렇게 합니다.</div>
+                </div>
+            </div>
             <div class="sub_1">
-                <marquee behavior="scroll" direction="left" scrollamount="10">콩과하는 이런일 저런일 이렇게 저렇게 합니다.</marquee>
+                <div class="marquee-item_1">콩과하는 이런일 저런일 이렇게 저렇게 합니다.</div>
             </div>
             <div class="sub_2">
-                <marquee behavior="scroll" direction="left" scrollamount="15">콩과하는 이런일 저런일 이렇게 저렇게 합니다.</marquee>
+                <div class="marquee-item_2">콩과하는 이런일 저런일 이렇게 저렇게 합니다.</div>
             </div>
         </div>
 
@@ -56,15 +60,29 @@
             </div>
         </div>
 
-        <div class="div8">
+        <div class="div8" id="myDiv">
             <div class="mobile">
-                ⓒ <script type="text/javascript">
-                    today=new Date();
-                    yyyy=today.getFullYear();
-                    document.write(yyyy);
-                </script> KONG & HA. ALL RIGHTS RESERVED.
+
             </div>
             <div class="sub_3">
+                <div class="wrap">
+                    <section>
+                        <div class="wrapper_switch">
+                            <input type="checkbox" id="switch_color">
+                            <label for="switch_color" class="switch_label_color">
+                            <span class="onf_btn_color"></span>
+                            </label>
+                        </div>
+                    </section>
+                    <section>
+                    <div class="wrapper_language">
+                        <input type="checkbox" id="switch_language">
+                        <label for="switch_language" class="switch_label_language">
+                            <span class="onf_btn_language">KR</span>
+                        </label>
+                        </div>
+                    </section>
+                </div>
             </div>
             <div class="sub_4">
                 ⓒ <script type="text/javascript">
@@ -76,24 +94,7 @@
         </div>
 
 
-        <div class="wrap">
-            <section>
-                <div class="wrapper_switch">
-                    <input type="checkbox" id="switch_color">
-                    <label for="switch_color" class="switch_label_color">
-                    <span class="onf_btn_color"></span>
-                    </label>
-                </div>
-            </section>
-            <section>
-            <div class="wrapper_language">
-                <input type="checkbox" id="switch_language">
-                <label for="switch_language" class="switch_label_language">
-                    <span class="onf_btn_language">KR</span>
-                </label>
-                </div>
-            </section>
-        </div>
+
 
     </div>
 </div>

@@ -7,6 +7,12 @@
 //     duplicated: true
 // });
 
+// const marqueeContainer = document.querySelector('.sub_1');
+// const marqueeItem = document.querySelector('.marquee-item');
+
+// Set the width of the marquee item to match the width of the container
+// marqueeItem.style.width = `${sub_1.offsetWidth}px`;
+
 
 
 const switch_color = document.getElementById("switch_color");
@@ -61,3 +67,22 @@ switch_language.addEventListener("click", function() {
         div7_text.innerText = "클라이언트\n프로젝트";
     }
   });
+
+
+
+  function moveDiv() {
+    var wrap = document.querySelector('.wrap');
+    var div8 = document.querySelector('#myDiv');
+    var mobile = div8.querySelector('.mobile');
+    var screenWidth = window.innerWidth;
+
+    if (screenWidth < 820) {
+      mobile.appendChild(wrap);
+    } else {
+      var sub3 = document.querySelector('.sub_3');
+      sub3.insertBefore(wrap, sub3.firstChild);
+    }
+  }
+
+  window.addEventListener('load', moveDiv);
+  window.addEventListener('resize', moveDiv);
