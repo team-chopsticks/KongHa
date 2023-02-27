@@ -59,12 +59,13 @@
     .mobile {
         display: block;
         width: 100vw;
-        font-size: 1.25rem;
+        font-size: 1.65rem;
         padding: 0.2rem;
     }
 
     .menu_inner:hover {
-        background-size: 35vw 40vh;
+        /* background-size: 35vw 40vh; */
+        background-size: 14rem;
         background-position-y: 50%;
     }
 
@@ -72,7 +73,8 @@
     .div4 .menu_inner:hover,
     .div5 .menu_inner:hover,
     .div6 .menu_inner:hover {
-        background-size: 35vw 40vh;
+        /* background-size: 35vw 40vh; */
+        background-size: 14rem;
         background-position-y: 50%;
     }
 
@@ -81,7 +83,7 @@
     }
 
     .menu_title {
-        font-size: 1.3rem;
+        font-size: 1.65rem;
     }
 
 
@@ -90,7 +92,13 @@
     }
 
     .marquee-item_3 {
-        padding-top: 0.4rem;
+        padding-top: 0.55rem;
+        padding-bottom: -0.25rem;
+        /* line-height: 2rem;
+        vertical-align: middle; */
+        /* set the line-height to be equal to the container height */
+        /* height: 2rem; */
+        /* set the height of the container */
         display: inline-block;
         white-space: nowrap;
         animation: marquee_3 5s linear infinite;
