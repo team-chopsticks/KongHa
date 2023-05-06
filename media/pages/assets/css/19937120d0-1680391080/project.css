@@ -1,0 +1,269 @@
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  /* SemiBold or Regular */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Happiness-Sans-SemiBold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/Happiness-Sans-Bold.woff2') format('woff2');
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* cursor: pointer; */
+}
+
+html {
+  font-family: 'Pretendard-Regular', sans-serif;
+  font-size: 2.2rem;
+  overflow-y: hidden;
+}
+
+.main {
+  margin-bottom: calc(3.6rem - 5px);
+  top: 1.8rem;
+  /* font-size: 2rem; */
+  font-size: 0.9rem;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  overflow-y: hidden;
+}
+
+.header-right .material-symbols-sharp {
+  padding-top: 10px;
+  font-size: 1.2rem;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr 1fr;
+  height: 1.8rem;
+  width: 100vw;
+  border-bottom: 5px solid black;
+  position: fixed;
+  background-color: white;
+  z-index: 100000 !important;
+  transform: translateZ(100px);
+  align-items: center;
+}
+
+.header a {
+  text-decoration: none;
+  color: black;
+}
+
+.header a::after {
+  color: black;
+}
+
+.header-left {
+  text-align: left;
+  padding-left: 10px;
+}
+
+.header-middle-left {
+  border-right: 5px solid black;
+  height: 100%;
+}
+
+.header-middle-right {
+  padding-left: 10px;
+}
+
+.header-middle {
+  text-align: center;
+}
+
+.header-right {
+  text-align: right;
+  padding-right: 10px;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 1.8rem;
+  bottom: 0px;
+  width: 100%;
+  border-top: 5px solid black;
+  position: fixed;
+  background-color: white;
+  z-index: 100000 !important;
+  transform: translateZ(100px);
+  align-items: center;
+}
+
+.footer-left {
+  height: 100%;
+  border-right: 5px solid black;
+}
+
+.footer-right {
+  display: inline-grid;
+  justify-items: right;
+  align-items: flex-end;
+  padding: 0.6rem;
+  font-size: 18px;
+  user-select: none;
+  height: 100%;
+  /* border-left: 5px solid black; */
+}
+
+.detail {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: relative;
+  overflow-y: hidden;
+}
+
+.detail-left {
+  border-right: 5px solid black;
+  height: 100vh;
+  /* position: relative; */
+  word-break: keep-all;
+  padding: 0.5rem;
+  padding-bottom: 3.6rem;
+  width: 50vw;
+  max-height: calc(100vh - 3.6rem);
+  /* header의 높이 제외 */
+  overflow-y: auto;
+}
+
+.detail-right {
+  /* position: relative; */
+  word-break: keep-all;
+  top: 1.8rem;
+  height: 100vh;
+  overflow: auto;
+  padding: 0rem;
+  padding-bottom: calc(1.8rem - 5px);
+  width: 50vw;
+  max-height: calc(100vh - 1.8rem);
+  /* header의 높이 제외 */
+  overflow-y: auto;
+}
+
+.detail-container {
+  min-height: 100vh;
+}
+
+.project-gallery ul {
+  right: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.project-gallery img {
+  float: right;
+  width: 50vw;
+  margin-bottom: 0rem;
+  pointer-events: none;
+  border-bottom: 5px solid black;
+}
+
+.project-gallery li {
+  justify-self: end;
+}
+
+.video {
+  float: right;
+  width: 50vw;
+  /* justify-content: flex-end; */
+}
+
+.description-img img {
+  width: 100%;
+}
+
+.divider {
+  /* position: absolute; */
+  border-bottom: 5px solid black;
+  padding: none;
+}
+
+@media (max-width: 920px) {
+  html {
+    font-family: 'Pretendard-Regular', sans-serif;
+    font-size: 1.6rem;
+  }
+
+  main {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-left {
+    width: 100vw;
+    padding-top: .8rem;
+    border-right: none;
+    max-height: 40vh;
+    border-bottom: 5px solid black;
+  }
+
+  .detail-right {
+    width: 100vw;
+    max-height: 60vh;
+  }
+
+  .header-middle-right {
+    display: none;
+  }
+
+  .header-middle-left {
+    display: none;
+  }
+
+  .header {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    height: 2rem;
+  }
+
+  .header-middle {
+    display: inline;
+    text-align: left;
+    padding-left: 0.5rem;
+  }
+
+
+  .detail {
+    display: grid;
+    grid-template-columns: 1fr;
+    position: relative;
+    overflow-y: hidden;
+  }
+
+  .detail-container {
+    min-height: 0vh;
+    padding-bottom: 1rem;
+  }
+
+
+
+  .project-gallery img {
+    width: 100vw;
+  }
+
+  .video {
+    width: 100vw;
+  }
+
+  .footer {
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .footer-left {
+    display: none;
+  }
+}

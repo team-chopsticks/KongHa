@@ -1,0 +1,9 @@
+title: Inspirations-kr
+
+sections:
+  pages:
+    headline: 영감의 원천
+    type: pages
+    template: inspiration-kr
+    layout: cards
+    limit: 20

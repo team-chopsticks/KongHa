@@ -1,0 +1,17 @@
+title: Site
+
+sections:
+  pages:
+    type: pages
+    layout: cards
+
+# files:
+#   sortable: true
+#   fields:
+#     template:
+#       type: hidden
+#       default: thumbnail
+
+preset: pages
+
+unlisted: true

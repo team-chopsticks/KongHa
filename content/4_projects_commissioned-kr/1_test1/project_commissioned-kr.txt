@@ -1,0 +1,69 @@
+Title: 진구
+
+----
+
+Category: Living
+
+----
+
+Year: 2022
+
+----
+
+Client: Tester
+
+----
+
+Methods: 
+
+----
+
+Collaboration: 
+
+----
+
+Link: 
+
+----
+
+Etc: 
+
+----
+
+Text: Test 123
+
+----
+
+Video: <div style="padding:75% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/785777816?h=db0edbd64c&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Quit_4"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+
+----
+
+Image: 
+
+----
+
+Featured-image:
+
+- file://WAfSWgLUDm8WBz0k
+- file://xRDPy4TXvG5JRtgi
+- file://1cvinpEDLzLsHy79
+
+----
+
+Portfolio-image:
+
+- file://WAfSWgLUDm8WBz0k
+- file://xRDPy4TXvG5JRtgi
+- file://1cvinpEDLzLsHy79
+
+----
+
+Tag: 
+
+----
+
+Thumbnail: - file://xRDPy4TXvG5JRtgi
+
+----
+
+Uuid: mjEuYnpQrFQ6t4U5

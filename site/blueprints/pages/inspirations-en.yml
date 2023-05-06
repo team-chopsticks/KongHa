@@ -1,0 +1,9 @@
+title: Inspirations-kr
+
+sections:
+  pages:
+    headline: Inspirations
+    type: pages
+    template: inspiration-en
+    layout: cards
+    limit: 20

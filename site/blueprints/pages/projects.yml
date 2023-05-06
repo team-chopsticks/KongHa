@@ -1,0 +1,28 @@
+title: Projects
+
+sections:
+  published:
+    headline: Published Projects
+    type: pages
+    layout: cards
+    template: project
+    text: "{{ page.title}} by {{page.client}}"
+    info: "Category: {{ page.category }}"
+    status: published
+    # limit: 5
+    image:
+      ratio: 4/3
+      cover: true
+
+  unpublished:
+    headline: Unpublished Projects
+    type: pages
+    layout: list
+    template: project
+    text: "{{ page.title}} by {{page.client}}"
+    info: "Category: {{ page.category }}"
+    status: drafts
+    help: Always upload a nice cover first!
+    image:
+      ratio: 4/3
+      cover: true
